@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Resume Interview Generator</title>
+  <style>
+    /* General Styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b); /* Updated background gradient */
+      color: white;
+      text-align: center;
+    }
+
+    /* Header */
+    header {
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    .logo {
+      width: 100px;
+    }
+
+    /* Sections */
+    section {
+      margin: 20px auto;
+      max-width: 80%;
+      padding: 20px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Next Button */
+    .next-btn {
+      padding: 12px 24px;
+      background: #FFD700;
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .next-btn:hover {
+      background: #FFA500;
+    }
+
+    /* Options Page */
+    .options {
+      display: flex;
+      justify-content: space-around;
+      margin: 40px auto;
+    }
+
+    .option-box {
+      width: 30%;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 10px;
+    }
+
+    .option-box button {
+      background: #FFD700;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .option-box button:hover {
+      background: #FFA500;
+    }
+
+    /* Survey */
+    .survey textarea {
+      width: 80%;
+      height: 100px;
+      border-radius: 5px;
+      padding: 10px;
+      margin: 10px;
+    }
+
+    .survey button {
+      padding: 10px 20px;
+      background: #28A745;
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+      border-radius: 5px;
+    }
+
+    .survey button:hover {
+      background: #218838;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .options {
+        flex-direction: column;
+      }
+      .option-box {
+        width: 80%;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Page 1: Landing Page -->
+  <section id="landing-page">
+    <header>
+      <img src="logo.png" alt="AI Question Generator Logo" class="logo" />
+      <h1>AI Automatic Interview Question Generator</h1>
+    </header>
+
+    <section class="how-it-works">
+      <h2>How It Works?</h2>
+      <p>Upload your resume and get AI-generated interview questions based on your skills, experience, and the job you're applying for.</p>
+    </section>
+
+    <section class="uses">
+      <h2>Why Use Our AI Interview Generator?</h2>
+      <ul>
+        <li>Get role-specific interview questions instantly</li>
+        <li>Practice with AI-powered mock interviews</li>
+        <li>Improve your responses with AI feedback</li>
+      </ul>
+    </section>
+
+    <section class="faq">
+      <h2>Frequently Searched Interview Questions</h2>
+      <div class="questions">
+        <h3>Top Companies:</h3>
+        <ul>
+          <li>Google Interview Questions</li>
+          <li>Amazon Interview Questions</li>
+          <li>Microsoft Interview Questions</li>
+        </ul>
+        <h3>Popular Positions:</h3>
+        <ul>
+          <li>Software Engineer Interview Questions</li>
+          <li>Data Scientist Interview Questions</li>
+          <li>Product Manager Interview Questions</li>
+        </ul>
+      </div>
+    </section>
+
+    <button onclick="goToNextPage()" class="next-btn">Next</button>
+  </section>
+
+  <!-- Page 2: AI Tools Section -->
+  <section id="next-page" style="display: none;">
+    <header>
+      <h1>AI Resume Tools</h1>
+    </header>
+
+    <section class="options">
+      <div class="option-box">
+        <h2>Resume Checker</h2>
+        <p>Analyze and improve your resume with AI-driven feedback.</p>
+        <button>Try Now</button>
+      </div>
+      <div class="option-box">
+        <h2>AI Interview Prep</h2>
+        <p>Practice real interview questions and get AI feedback.</p>
+        <button>Start Practicing</button>
+      </div>
+      <div class="option-box">
+        <h2>Resume Builder</h2>
+        <p>Create a professional resume with AI guidance.</p>
+        <button>Build Resume</button>
+      </div>
+    </section>
+
+    <!-- Survey Section -->
+    <section class="survey">
+      <h2>We Value Your Opinion!</h2>
+      <p>What features would you like us to improve?</p>
+      <textarea placeholder="Your suggestions..."></textarea>
+      <button>Submit</button>
+    </section>
+  </section>
+
+  <!-- JavaScript for Navigation -->
+  <script>
+    function goToNextPage() {
+      document.getElementById("landing-page").style.display = "none";
+      document.getElementById("next-page").style.display = "block";
+    }
+  </script>
+</body>
+</html>
